@@ -3,7 +3,6 @@
 const config = require('config');
 const Joi = require('joi');
 const mongoose = require('mongoose');
-
 const project = new mongoose.Schema({
   name: {
     type: String,
@@ -19,10 +18,7 @@ const project = new mongoose.Schema({
     unique: true
   },
   owner: {
-    type: String,
-    required: true,
-    minlength: 5,
-    maxlength: 1024
+    type:String,
   },
   tags : [{
     type:String
